@@ -43,6 +43,13 @@ Visit http://localhost:3000 in your browser to access the application.
 ## Contributing
 Contributions are welcome! Feel free to open issues or pull requests to suggest improvements or new features.
 
+## Demo
+
+
+https://github.com/aditya-jha-kumar/Hospital-Management-System/assets/96906425/6fb7b441-1fd3-4003-b67c-a39efa0b200d
+
+
+
 ## License
 This project is licensed under the MIT License.
 
