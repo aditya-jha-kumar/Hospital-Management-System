@@ -20,7 +20,7 @@ const App = () => {
     const fetchUser = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:4000/api/v1/user/patient/me",
+          "https://hms-deployment-huqx.onrender.com/api/v1/user/patient/me",
           { withCredentials: true }
         );
         setIsAuthenticated(true);
@@ -32,6 +32,25 @@ const App = () => {
     };
     fetchUser();
   }, [isAuthenticated]);
+
+  // Dynamically add the scripts
+  useEffect(() => {
+    const script1 = document.createElement("script");
+    script1.src = "https://cdn.botpress.cloud/webchat/v2.2/inject.js";
+    script1.async = true;
+    document.body.appendChild(script1);
+
+    const script2 = document.createElement("script");
+    script2.src = "https://files.bpcontent.cloud/2024/10/21/16/20241021161517-2EE446VY.js";
+    script2.async = true;
+    document.body.appendChild(script2);
+
+    // Cleanup the scripts when the component unmounts
+    return () => {
+      document.body.removeChild(script1);
+      document.body.removeChild(script2);
+    };
+  }, []);
 
   return (
     <Router>
